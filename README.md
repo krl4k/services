@@ -40,6 +40,6 @@ deployment with Kubernetes. You will virtualize a network and do "clustering".
 
 ## delete 
     kubectl delete --all
-
+    docker rmi $(docker images -a -q)
 ## info
     kubectl describe ...
