@@ -31,6 +31,14 @@ deployment with Kubernetes. You will virtualize a network and do "clustering".
 
 # K8S
 
+##start
+    minikube start --vm-driver=virtualbox
+    eval $(minikube docker-env) 
+    kubectl delete pods nginx
+    kubectl apply -f nginx.yaml
+    kubectl get pods
+    kubectl logs
+
 ## create
     kubectl create -f <filenane.yaml> 
     kubectl get <name.apps>
@@ -43,3 +51,4 @@ deployment with Kubernetes. You will virtualize a network and do "clustering".
     docker rmi $(docker images -a -q)
 ## info
     kubectl describe ...
+  
