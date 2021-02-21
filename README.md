@@ -52,3 +52,8 @@ deployment with Kubernetes. You will virtualize a network and do "clustering".
 ## info
     kubectl describe ...
   
+minikube stop — останавливает наш кластер.<br/>
+minikube delete — удаляет наш кластер. Если вы устроили бардак лучше удалите текущий кластер и заново разверните новый.
+minikube dashboard — запускает наш Kubernetes web-dashboard. Если он запускается, значит у нас уже есть одна галочка в subject.
+minikube addons list — показывает список дополнительных опций. Тут вы найдете MetalLb, который необходимо использовать по сабжекту.
+minikube addons enable metallb — включит metallb в нашем Kubernetes.
