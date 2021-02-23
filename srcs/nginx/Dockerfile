@@ -1,34 +1,27 @@
 FROM alpine:3.12.3
 
-RUN apk update
-RUN apk upgrade
-RUN apk add openssl
-RUN apk add nginx
-RUN apk add supervisor
-RUN apk add openrc
-RUN apk add openssh
-RUN apk add bash
-
-RUN sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config \
-  && echo "root:root" | chpasswd \
-  && /usr/bin/ssh-keygen -A \
-  && ssh-keygen -t rsa -b 4096 -f  /etc/ssh/ssh_host_key
-
-RUN openssl req -newkey rsa:2048 \
-	-x509 -sha256 -days 365 -nodes \
-	-out /etc/ssl/certs/example.crt \
-	-keyout /etc/ssl/private/example.key\
-	-subj "/C=RU/ST=Tatarstan/L=Kazan/O=Ecole/OU=21/CN=localhost"
-
-#nginx
+RUN apk add nginx openssl openrc sudo supervisor openssh bash
 RUN mkdir -p /run/nginx
-RUN rm etc/nginx/conf.d/default.conf
-# COPY /srcs/nginx.conf etc/nginx/conf.d/
-COPY /srcs/nginx.conf etc/nginx/
+RUN mkdir /var/run/sshd
+RUN rm -rf /etc/nginx/conf.d/default.conf
 
-#supervisord
-COPY /srcs/supervisord.conf /etc/supervisord.conf
+COPY index.html /var/www/
+COPY shitt.png /var/www/
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY supervisord.conf /etc/supervisord.conf
 
 
-EXPOSE 22 80 443
+RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+    -out nginx.crt \
+    -keyout nginx.key \
+    -subj "/C=RU/ST=-/L=-/O=-/OU=-/CN=ft_services"
+
+
+RUN adduser -D krl4k && echo "krl4k:root" | chpasswd && addgroup krl4k wheel \
+&& echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel && /usr/bin/ssh-keygen -A
+
+EXPOSE 80 443 22
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
+
+#  .ssh/known_host засоряется, удалить последнюю строчку
+#  ssh krl4k@192.168.99.100 -p 22
