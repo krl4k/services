@@ -51,6 +51,11 @@ deployment with Kubernetes. You will virtualize a network and do "clustering".
     docker rmi $(docker images -a -q)
 ## info
     kubectl describe ...
+    
+    
+## docker rm
+  docker stop $(docker ps -a -q)
+  docker rm $(docker ps -a -q)
   
 minikube stop — останавливает наш кластер.<br/>
 minikube delete — удаляет наш кластер. Если вы устроили бардак лучше удалите текущий кластер и заново разверните новый.
