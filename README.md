@@ -21,6 +21,8 @@ deployment with Kubernetes. You will virtualize a network and do "clustering".
 ### Minicube
     https://kubernetes.io/ru/docs/tasks/tools/install-minikube/
 
+### Шпаргалка по командам k8s
+  https://kubernetes.io/ru/docs/reference/kubectl/cheatsheet/
 
 ## All
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
