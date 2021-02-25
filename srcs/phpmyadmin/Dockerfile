@@ -30,7 +30,8 @@ RUN tar -xzvf phpMyAdmin-5.0.4-english.tar.gz
 RUN rm -f phpMyAdmin-5.0.4-english.tar.gz
 RUN mv phpMyAdmin-5.0.4-english /etc/phpMyAdmin
 RUN mkdir -p /var/run/php
-
+RUN mkdir -p /etc/phpMyAdmin/tmp
+RUN chmod 777 /etc/phpMyAdmin/tmp
 
 #   nginx
 RUN mkdir -p /var/run/nginx
