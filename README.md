@@ -64,3 +64,7 @@ minikube delete — удаляет наш кластер. Если вы устр
 minikube dashboard — запускает наш Kubernetes web-dashboard. Если он запускается, значит у нас уже есть одна галочка в subject.
 minikube addons list — показывает список дополнительных опций. Тут вы найдете MetalLb, который необходимо использовать по сабжекту.
 minikube addons enable metallb — включит metallb в нашем Kubernetes.
+
+### MYSQL
+  https://www.dmosk.ru/miniinstruktions.php?mini=mysql-create-db
+  
