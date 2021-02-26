@@ -27,15 +27,18 @@ RUN rm latest.tar.gz
 RUN mv wordpress /var/www/
 ADD wp-config.php /var/www/wordpress/wp-config.php
 
-#   nginx and php
+#   nginx
 RUN mkdir -p /var/run/nginx
-RUN mkdir -p /var/run/php
-RUN touch /var/run/nginx/nginx.pid
-
 RUN rm etc/nginx/conf.d/default.conf
 ADD nginx.conf etc/nginx/conf.d/
-ADD supervisord.conf ./etc/supervisord.conf
+
+#   supervisord
+RUN mkdir -p /var/run/php
+ADD supervisord.conf /etc/supervisord.conf
 
 EXPOSE 5050
 
-CMD ["usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
+# CMD nginx -g "daemon off;"
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
+
+#

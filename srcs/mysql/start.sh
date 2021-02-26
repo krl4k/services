@@ -1,19 +1,15 @@
-#!/bin/bash
 rc default
 /etc/init.d/mariadb setup
 /etc/init.d/mariadb start
-#
-mysql_secure_installation
+
 mysql -uroot <<MYSQL_SCRIPT
-CREATE DATABASE mydb;
+CREATE DATABASE my_db;
 CREATE USER 'root'@'%' IDENTIFIED BY 'root';
-GRANT ALL PRIVILEGES ON DATABASE* TO 'root';
+GRANT ALL PRIVILEGES ON my_db.* TO 'root';
 FLUSH PRIVILEGES;
 MYSQL_SCRIPT
 
+mysql -uroot my_db < my_db.sql
 
-#mysql -uroot DB < DB.sql
-#mysql -uroot db
 /etc/init.d/mariadb stop
 exec /usr/bin/mysqld_safe
-#/bin/sh

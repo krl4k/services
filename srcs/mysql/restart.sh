@@ -1,3 +1,4 @@
+eval $(minikube docker-env)
 kubectl delete svc mysql-svc
 kubectl delete deployment mysql-deployment
 docker image rm mysql_image

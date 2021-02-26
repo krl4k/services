@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: nginx-svc
   annotations:
-    metallb.universe.tf/allow-shared-ip: minikube
+    metallb.universe.tf/allow-shared-ip: default
 spec:
   selector:
     app: nginx

@@ -20,7 +20,7 @@ RUN rm -rf /etc/nginx/conf.d/default.conf
 
 # html in welcome nginx page
 COPY index.html /var/www/
-COPY shitt.png /var/www/
+# COPY shitt.png /var/www/
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 #   supervisord

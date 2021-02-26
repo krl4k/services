@@ -10,7 +10,9 @@ RUN rm -f /var/cache/apk/*
 COPY start.sh /
 RUN chmod -R 755 /start.sh
 
-# COPY mydb.sql /
+COPY my_db.sql /
+RUN chmod -R 755 /my_db.sql
+
 COPY my.cnf /etc/mysql
 
 VOLUME ["/var/lib/"]
