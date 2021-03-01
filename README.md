@@ -30,7 +30,7 @@ deployment with Kubernetes. You will virtualize a network and do "clustering".
 
 ### Resources
   * [**CheatSheet K8S**](https://kubernetes.io/ru/docs/reference/kubectl/cheatsheet/)
-  * []()
+  * [**Alpine Linux**](https://www.youtube.com/watch?v=VffFuW6yzRk&ab_channel=Pingvinus)
   * []()
   * []()
   * []()
