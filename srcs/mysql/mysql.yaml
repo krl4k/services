@@ -41,10 +41,10 @@ spec:
       labels:
         app: mysql
     spec:
-#      volumes:
-#        - name: mysql-storage
-#          persistentVolumeClaim:
-#            claimName: mysql-claim
+      #      volumes:
+      #        - name: mysql-storage
+      #          persistentVolumeClaim:
+      #            claimName: mysql-claim
       containers:
         - name: mysql
           image: mysql_image

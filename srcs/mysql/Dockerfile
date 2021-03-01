@@ -15,8 +15,8 @@ RUN chmod -R 755 /my_db.sql
 
 COPY my.cnf /etc/mysql
 
-VOLUME ["/var/lib/"]
-VOLUME ["/sys/fs/cgroup"]
+VOLUME ["/var/lib/mysql"]
+# VOLUME ["/sys/fs/cgroup"]
 
 
 EXPOSE 3306
