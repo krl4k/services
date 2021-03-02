@@ -6,14 +6,6 @@ deployment with Kubernetes. You will virtualize a network and do "clustering".
 ## How to start
     sh start.sh
 
-## Installing
-### MacOs
-  With HomeBrew
-
-    curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
-    brew install minikube
-
-
 ## Technologies used
   * ___Kubernetes___
   * ___Nginx___ 
