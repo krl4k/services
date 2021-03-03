@@ -25,6 +25,10 @@ deployment with Kubernetes. You will virtualize a network and do "clustering".
   * [**Alpine Linux**](https://www.youtube.com/watch?v=VffFuW6yzRk&ab_channel=Pingvinus)
   * [**influxDB**](https://blog.egrik.ru/2016/01/influxdata-1-influxdb.html)
   * [**DIY Set Up Telegraf, InfluxDB, & Grafana on Kubernetes**](https://blog.gojekengineering.com/diy-set-up-telegraf-influxdb-grafana-on-kubernetes-d55e32f8ce48)
+  * [**Telegraf**](https://github.com/influxdata/telegraf)
+  * []()
+  * []()
+  * []()
   * []()
   * []()
 
