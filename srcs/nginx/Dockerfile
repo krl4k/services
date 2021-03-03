@@ -32,8 +32,7 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
     -subj "/C=RU/ST=-/L=-/O=-/OU=-/CN=ft_services"
 
 #   ssh (22 port use)
-RUN adduser -D krl4k && echo "krl4k:root" | chpasswd
-#&& \ addgroup krl4k wheel && echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel && /usr/bin/ssh-keygen -A
+RUN adduser -D krl4k && echo "krl4k:root" | chpasswd &&  addgroup krl4k wheel && echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel && /usr/bin/ssh-keygen -A
 
 
 EXPOSE 80 443 22

@@ -89,8 +89,8 @@ $cfg['Servers'][$i]['password'] = 'root';
  */
 
 /**
- * Directories for saving/loading files from server
- */
+** Directories for saving/loading files from server
+*/
 $cfg['UploadDir'] = '';
 $cfg['SaveDir'] = '';
 
