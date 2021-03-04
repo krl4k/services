@@ -27,7 +27,7 @@ deployment with Kubernetes. You will virtualize a network and do "clustering".
   * [**DIY Set Up Telegraf, InfluxDB, & Grafana on Kubernetes**](https://blog.gojekengineering.com/diy-set-up-telegraf-influxdb-grafana-on-kubernetes-d55e32f8ce48)
   * [**Telegraf**](https://github.com/influxdata/telegraf)
   * [**K8S Tutorial**](https://kubernetes.io/ru/docs/tutorials/kubernetes-basics/)
-  * []()
+  * [**SVC K8S**](https://kubernetes.io/ru/docs/tutorials/kubernetes-basics/expose/expose-intro/)
   * []()
   * []()
   * []()
