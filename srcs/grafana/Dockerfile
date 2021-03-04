@@ -17,7 +17,7 @@ RUN rm grafana-enterprise-7.4.0.linux-amd64.tar.gz
 
 RUN mkdir /grafana-7.4.0/data
 
-#RUN mv grafana.db /grafana-7.4.0/data/
+COPY  grafana.db /grafana-7.4.0/data/
 
 EXPOSE 3000
 

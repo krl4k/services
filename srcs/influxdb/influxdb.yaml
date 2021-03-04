@@ -20,7 +20,7 @@ metadata:
   name: influxdb-pvc
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 1Gi

@@ -1,8 +1,6 @@
-FROM alpine:3.12.3
+FROM alpine:3.7
 
 RUN apk add openssl vsftpd
-
-
 
 RUN openssl req -x509 -nodes -days 365 -newkey rsa:4096 \
     -out /etc/ssl/certs/ftps.pem \
