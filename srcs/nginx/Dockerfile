@@ -40,5 +40,5 @@ EXPOSE 80 443 22
 #   supervisord
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
 
-#  .ssh/known_host засоряется, удалить последнюю строчку
+#  echo ' ' >  ~/.ssh/known_host засоряется, удалить последнюю строчку
 #  ssh krl4k@192.168.99.100 -p 22
