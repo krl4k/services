@@ -4,7 +4,7 @@ Ft_services will introduce you to Kubernetes. You will discover cluster manageme
 deployment with Kubernetes. You will virtualize a network and do "clustering".
 
 ## How to start
-    sh start.sh
+    sh setup.sh
 
 ## Technologies used
   * ___Kubernetes___
@@ -28,9 +28,5 @@ deployment with Kubernetes. You will virtualize a network and do "clustering".
   * [**Telegraf**](https://github.com/influxdata/telegraf)
   * [**K8S Tutorial**](https://kubernetes.io/ru/docs/tutorials/kubernetes-basics/)
   * [**SVC K8S**](https://kubernetes.io/ru/docs/tutorials/kubernetes-basics/expose/expose-intro/)
-  * []()
-  * []()
-  * []()
-
 
 
