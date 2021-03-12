@@ -1,4 +1,6 @@
 # services
+[![jaeskim's 42Project Score](https://badge42.herokuapp.com/api/ft_services/fgrisell/ft_services)](https://github.com/JaeSeoKim/badge42)
+
 
 Ft_services will introduce you to Kubernetes. You will discover cluster management and
 deployment with Kubernetes. You will virtualize a network and do "clustering".
